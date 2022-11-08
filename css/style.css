@@ -349,6 +349,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px
+  ;
 }
 .team-link {
   display: flex;
@@ -394,6 +396,9 @@ img {
   gap: 30px;
 }
 
+.clients-logo:hover{
+}
+
 .client-link {
   display: flex;
   justify-content: center;
@@ -404,22 +409,34 @@ border: 1px solid #AFB1B8;
 border-radius: 4px;
 }
 
+.client-link:hover .clients-icon,
+.client-link:focus .clients-icon{
+  fill: #2196F3;
+  border-radius: 4px;
+}
 .client-link:hover,
 .client-link:focus{
-  border: 1px solid #2196F3;
-  border-radius: 4px;
+border: 1px solid #2196f3;
 }
 .clients-icon{
   fill: #AFB1B8;
 }
-.clients-logo:hover .clients-icon,
-.clients-logo:focus .clients-icon{
+
+/* .clients-icon:hover,
+.clients-icon:focus{
+  fill: #2196F3;
+} */
+/* .clients-logo:hover{
   fill: #2196F3;
 }
+.clients-logo:focus{
+  fill: #2196F3;
+  border: 1px solid #2196F3;
+  border-radius: 4px;
+} */
 
 /* -------------FOOTER */
 .footer {
-  display: block;
   padding-top: 60px;
   padding-bottom: 60px;
   background: var(--secondary-bg-color);
@@ -436,9 +453,8 @@ border-radius: 4px;
 }
 
 .footer-social {
-  display: block;
   width: 206px;
-  height: 80px;
+  /* height: 80px; */
 }
 
 .footer-icons {
@@ -467,14 +483,17 @@ border-radius: 4px;
 
 .footer-nav {
   display: flex;
+  align-items: baseline;
   gap: 70px;
 }
 
-.footer-text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--secondary-color);
+.footer-social .tittle{
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+}
+
+.footer .footer-text {
   cursor: pointer;
 }
 
@@ -487,11 +506,15 @@ border-radius: 4px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
-.footer .contacts:first-child {
+.footer .text{
   color: var(--secondary-color);
+  font-style: normal;
+  margin-bottom: 9px;
+  cursor: pointer;
 }
-
+.footer .text:hover{
+  color: var(--accent-color);
+}
 .footer .contacts:hover {
   color: var(--accent-color);
 }
@@ -544,6 +567,7 @@ border-radius: 4px;
   letter-spacing: 0.03em;
   color: var(--main-color);
   border: transparent;
+  border-radius: 4px;
 }
 
 .portfolio-btn:hover {
